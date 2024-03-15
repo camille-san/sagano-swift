@@ -17,6 +17,7 @@
 		91AC63542BA4949F003124C0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AC63532BA4949F003124C0 /* Item.swift */; };
 		91AC63562BA4B00F003124C0 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AC63552BA4B00F003124C0 /* PriceView.swift */; };
 		91AC63582BA4B232003124C0 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AC63572BA4B232003124C0 /* ItemView.swift */; };
+		91AC635C2BA4EFF3003124C0 /* ItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AC635B2BA4EFF3003124C0 /* ItemDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		91AC63532BA4949F003124C0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		91AC63552BA4B00F003124C0 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		91AC63572BA4B232003124C0 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		91AC635B2BA4EFF3003124C0 /* ItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				91AC634E2BA492CA003124C0 /* Components */,
 				91AC633A2BA48B5B003124C0 /* ContentView.swift */,
 				91AC634C2BA492BF003124C0 /* HomeView.swift */,
+				91AC635B2BA4EFF3003124C0 /* ItemDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				91AC634D2BA492BF003124C0 /* HomeView.swift in Sources */,
 				91AC63562BA4B00F003124C0 /* PriceView.swift in Sources */,
 				91AC63502BA492DC003124C0 /* SearchBar.swift in Sources */,
+				91AC635C2BA4EFF3003124C0 /* ItemDetails.swift in Sources */,
 				91AC63582BA4B232003124C0 /* ItemView.swift in Sources */,
 				91AC63522BA49481003124C0 /* ModelData.swift in Sources */,
 				91AC633B2BA48B5B003124C0 /* ContentView.swift in Sources */,

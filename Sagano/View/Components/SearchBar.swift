@@ -24,6 +24,7 @@ struct SearchBar: View {
                     .font(.system(size: 18))
                         .foregroundStyle(.gray)
                 )
+                .foregroundStyle(.black)
                     .frame(height: 42)
                     .textFieldStyle(.plain)
             }
@@ -39,12 +40,11 @@ struct SearchBar: View {
                     radius: 4,
                     x: 4,
                     y: 4)
-            .padding(.horizontal, 16)
-            .padding(.vertical, 8)
         }
     }
 }
 
 #Preview {
     SearchBar()
+        .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }

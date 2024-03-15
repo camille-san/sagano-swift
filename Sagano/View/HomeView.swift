@@ -9,39 +9,44 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            SearchBar()
-            List {
-                Text("For you")
-                    .font(.system(
-                        size: 24,
-                        weight: .bold,
-                        design: .default))
-                    .padding(.bottom, 8)
-                    .listRowSeparator(.hidden)
-
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack (spacing: 24){
-                        ForEach(ModelData().items) { item in
-                            ItemView(item: item, ratio: 170)
-                        }
-                    }
+        NavigationStack {
+            VStack {
+                SearchBar()
                     .padding(.horizontal, 16)
-                    Spacer()
-                }
-                .listRowInsets(EdgeInsets())
-                .listRowSeparator(.hidden)
+                    .padding(.vertical, 8)
+                VStack (alignment: .leading) {
+                    Text("For you")
+                        .font(.system(
+                            size: 26,
+                            weight: .bold,
+                            design: .default))
+                        .foregroundStyle(.black)
+                        .padding(.bottom, 8)
 
-//                Text("Test")
-//                    .listRowSeparator(.hidden)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack (spacing: 24){
+                            ForEach(ModelData().items) { item in
+                                NavigationLink(destination: ItemDetails(item: item)) {
+                                    ItemView(item: item, ratio: 170)
+                                }
+                                .foregroundStyle(.black)
+                            }
+                        }
+                        Spacer()
+                    }
+                    .listRowInsets(EdgeInsets())
+                    .listRowSeparator(.hidden)
+                }
+                .padding(16)
+                .background(.white)
             }
-            .listStyle(.inset)
+            .background(LinearGradient(colors: [.cyan, .mint], startPoint: .leading, endPoint: .trailing))
         }
-        .background(LinearGradient(colors: [.cyan, .mint], startPoint: .leading, endPoint: .trailing))
     }
 
 }
 
 #Preview {
     HomeView()
+        .preferredColorScheme(.dark)
 }

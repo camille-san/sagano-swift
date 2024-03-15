@@ -13,17 +13,18 @@ struct ItemView: View {
     var ratio : CGFloat
 
     var body: some View {
-
         VStack (alignment: .leading, spacing: 1) {
             Image(item.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: ratio)
+                .frame(maxWidth: .infinity, maxHeight: ratio)
+                .clipped()
+                .background(.white)
             Text(item.name)
-                .font(.system(size: ratio/9))
+                .font(.system(size: ratio/10))
                 .lineLimit(1)
                 .padding(.top, 4)
-            PriceView(price: item.price, size: ratio/9)
+            PriceView(price: item.price, size: ratio/10)
         }
         .frame(width: ratio)
 
@@ -31,5 +32,6 @@ struct ItemView: View {
 }
 
 #Preview {
-    ItemView(item: Item(name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla sapien, auctor vitae finibus vel, egestas sit amet ligula.", price: 10.99, image: "1"), ratio: 200)
+    ItemView(item: ModelData().items[0], ratio: 200)
+        .preferredColorScheme(.dark)
 }
